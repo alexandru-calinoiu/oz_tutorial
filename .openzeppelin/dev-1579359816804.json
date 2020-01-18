@@ -1,0 +1,94 @@
+{
+  "contracts": {
+    "Box": {
+      "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "constructorCode": "60806040526100156001600160e01b0361006216565b600080546001600160a01b0319166001600160a01b03928316178082556040519216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3610066565b3390565b6103e2806100756000396000f3fe",
+      "bodyBytecodeHash": "6fc194e1604555ec4e89a514a9aa6dba87b443f644bbbf0e730ecd1766be7e08",
+      "localBytecodeHash": "cb939bc26dcf993984652592021be8ab2311bc1e28ba0556af80e10a330ff67d",
+      "deployedBytecodeHash": "cb939bc26dcf993984652592021be8ab2311bc1e28ba0556af80e10a330ff67d",
+      "types": {
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Ownable",
+          "path": "@openzeppelin/contracts/ownership/Ownable.sol",
+          "label": "_owner",
+          "astId": 33,
+          "type": "t_address",
+          "src": "449:22:1"
+        },
+        {
+          "contract": "Box",
+          "path": "contracts/Box.sol",
+          "label": "value",
+          "astId": 147,
+          "type": "t_uint256",
+          "src": "112:21:2"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": [
+          {
+            "action": "insert",
+            "updated": {
+              "index": 0,
+              "contract": "Ownable",
+              "path": "@openzeppelin/contracts/ownership/Ownable.sol",
+              "label": "_owner",
+              "astId": 33,
+              "type": "t_address",
+              "src": "449:22:1"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "oz_tutorial/Box": [
+      {
+        "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+        "version": "1.0.0",
+        "implementation": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+        "admin": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
+        "version": "1.0.0",
+        "implementation": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+        "admin": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+        "version": "1.0.0",
+        "implementation": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+        "admin": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24"
+  }
+}

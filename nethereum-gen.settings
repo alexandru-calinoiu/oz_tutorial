@@ -1,0 +1,7 @@
+{
+    "projectName": "Oz_tutorial",
+    "namespace": "Oz_tutorial.Contracts",
+    "lang": 0,
+    "autoCodeGen": true,
+    "projectPath": "../"
+}

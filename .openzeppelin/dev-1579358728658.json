@@ -1,0 +1,74 @@
+{
+  "contracts": {
+    "Box": {
+      "address": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+      "constructorCode": "608060405234801561001057600080fd5b5060e18061001f6000396000f3fe",
+      "bodyBytecodeHash": "85cd411f3b8a9ab69a302fea39dccc0b2c478d49a88acd7acf4608c1c196e536",
+      "localBytecodeHash": "899eab5c1f02222f0cf2f5215f7bad6212ccaee953e3c74879f0613e300fa5f3",
+      "deployedBytecodeHash": "899eab5c1f02222f0cf2f5215f7bad6212ccaee953e3c74879f0613e300fa5f3",
+      "types": {
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Box",
+          "path": "contracts/Box.sol",
+          "label": "value",
+          "astId": 3,
+          "type": "t_uint256",
+          "src": "44:21:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": [
+          {
+            "action": "delete",
+            "original": {
+              "index": 0,
+              "contract": "Ownable",
+              "path": "@openzeppelin/contracts/ownership/Ownable.sol",
+              "label": "_owner",
+              "astId": 33,
+              "type": "t_address",
+              "src": "449:22:1"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "oz_tutorial/Box": [
+      {
+        "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+        "version": "1.0.0",
+        "implementation": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+        "admin": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "kind": "Upgradeable"
+      },
+      {
+        "address": "0x0290FB167208Af455bB137780163b7B7a9a10C16",
+        "version": "1.0.0",
+        "implementation": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+        "admin": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24"
+  }
+}
