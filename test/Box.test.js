@@ -16,31 +16,30 @@ const Box = contract.fromArtifact('Box');
 describe('Box', function () {
     const [owner, other] = accounts;
 
-    const value = new BN('42');
-
     beforeEach(async function () {
         this.contract = await Box.new({
             from: owner
         });
+        await this.contract.initialize(owner);
     });
 
     it('retrives returs a value previously stored', async function () {
-        await this.contract.store(42, {
+        await this.contract.store(41, {
             from: owner
         });
 
-        expect((await this.contract.retrieve())).to.be.bignumber.equal(value);
+        expect((await this.contract.retrieve())).to.be.bignumber.equal(new BN('42'));
     });
 
     it('store emits an event', async function () {
-        const receipt = await this.contract.store(value, { from: owner });
+        const receipt = await this.contract.store(new BN('41'), { from: owner });
 
-        expectEvent(receipt, 'ValueChanged', { newValue: value });
+        expectEvent(receipt, 'ValueChanged', { newValue: new BN('42') });
     });
 
     it('non owner cannot store a value', async function () {
         await expectRevert(
-            this.contract.store(value, { from: other }),
+            this.contract.store(new BN('41'), { from: other }),
             'Ownable: caller is not the owner'
         )
     })

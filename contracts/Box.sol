@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "@openzeppelin/contracts/ownership/Ownable.sol";
+import "@openzeppelin/contracts-ethereum-package/contracts/ownership/Ownable.sol";
 
 contract Box is Ownable {
     uint256 private value;
@@ -9,7 +9,8 @@ contract Box is Ownable {
 
     function store(uint256 newValue) public onlyOwner {
         value = newValue;
-        emit ValueChanged(newValue);
+        value = value + 1;
+        emit ValueChanged(value);
     }
 
     function retrieve() public view returns (uint256) {
