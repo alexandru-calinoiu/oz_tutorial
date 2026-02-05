@@ -14,7 +14,7 @@
     "@openzeppelin/contracts-ethereum-package": "^2.4.0",
     "@openzeppelin/test-environment": "^0.1.2-rc.0",
     "@openzeppelin/test-helpers": "^0.5.4",
-    "@truffle/hdwallet-provider": "^1.0.29",
+    "@truffle/hdwallet-provider": "^1.7.0",
     "chai": "^4.2.0",
     "ganache-cli": "^6.8.2",
     "mocha": "^7.0.0"
